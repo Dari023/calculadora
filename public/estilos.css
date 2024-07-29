@@ -1,0 +1,70 @@
+
+.fondoimg{
+    background-image: url(img/fondo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6rem;
+     
+}
+
+
+.input1 input{
+    width: 28rem;
+    height: 4rem;
+    text-align: right;
+    font-size: 2rem;
+    background: transparent;
+    color: white;
+
+}
+
+@media (max-width: 730px) {
+    .input1 input{
+        width: 24rem;
+        height: 3rem;
+    }
+}
+
+.boton{
+    width: 7rem;
+    height: 6rem;
+    font-size: 2rem;
+    background-color: rgb(63, 87, 167);
+    color: black;
+    border: solid 1px black; 
+}
+
+@media (max-width: 730px) {
+    .boton{
+        width: 6rem;
+        height: 4rem;
+    }
+
+}
+
+
+.igual{ 
+   
+    width: 14rem;
+}
+
+
+.cero{
+    width: 14rem;
+}
+
+@media (max-width: 730px) {
+    .igual, .cero{
+        width: 12rem;
+    }
+
+}
