@@ -109,10 +109,6 @@ export const Calculadora = () => {
                         <button className="boton igual" onClick={calcularResultado}>=</button>
                     </div>
                     
-                   
-                
-                    
-                   
                 </div>
             </div>
             
