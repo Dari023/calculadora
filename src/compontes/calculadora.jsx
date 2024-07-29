@@ -105,10 +105,7 @@ export const Calculadora = () => {
                     </div>
                     <div>
                         <button className="boton" onClick={limpiar}>C</button>
-                
-                    
                         <button className="boton" onClick={limpiarUno}><i class="bi bi-backspace-fill"></i></button>
-                    
                         <button className="boton igual" onClick={calcularResultado}>=</button>
                     </div>
                     
