@@ -1,5 +1,5 @@
 import { useState } from "react"
-
+import { evaluate } from 'mathjs';
 export const Calculadora = () => {
     const [resultado, setResultado] = useState("")
    
@@ -12,7 +12,7 @@ export const Calculadora = () => {
         const calcularResultado = () => {
             try {
              
-              const resuladora = operaciones(resultado);
+              const resuladora = evaluate(resultado);
               setResultado(resuladora.toString());
             } catch (Error) {
               setResultado("Error");
@@ -20,43 +20,43 @@ export const Calculadora = () => {
             }
           };
         
-          const operaciones = (expresion) => {
-            expresion = expresion.replace(/\s+/g, '');
-            const operacion = expresion.split(/(\+|\-|\*|\/)/).filter(Boolean);
+        //   const operaciones = (expresion) => {
+        //     expresion = expresion.replace(/\s+/g, '');
+        //     const operacion = expresion.split(/(\+|\-|\*|\/)/).filter(Boolean);
         
-            let resultado  = parseFloat(operacion[0]);
+        //     let resultado  = parseFloat(operacion[0]);
         
-            for (let i = 1;  i < operacion.length; i += 2) {
-                const operador = operacion[i];
-                const numeroSiguiente = parseFloat(operacion[i + 1]);
+        //     for (let i = 1;  i < operacion.length; i += 2) {
+        //         const operador = operacion[i];
+        //         const numeroSiguiente = parseFloat(operacion[i + 1]);
         
-                if (isNaN(numeroSiguiente)) {
-                    throw new Error("expresión inválida");
-                }
+        //         if (isNaN(numeroSiguiente)) {
+        //             throw new Error("expresión inválida");
+        //         }
         
-                switch (operador) {
-                    case "+":
-                        resultado += numeroSiguiente;
-                        break;
-                    case "-":
-                        resultado -= numeroSiguiente;
-                        break;
-                    case "*":
-                        resultado *= numeroSiguiente;
-                        break;
-                    case "/":
-                        if (numeroSiguiente === 0) {
-                            throw new Error("división por cero");
-                        }
-                        resultado /= numeroSiguiente;
-                        break;
-                    default:
-                        throw new Error("Operador inválido");
-                }
-            }
+        //         switch (operador) {
+        //             case "+":
+        //                 resultado += numeroSiguiente;
+        //                 break;
+        //             case "-":
+        //                 resultado -= numeroSiguiente;
+        //                 break;
+        //             case "*":
+        //                 resultado *= numeroSiguiente;
+        //                 break;
+        //             case "/":
+        //                 if (numeroSiguiente === 0) {
+        //                     throw new Error("división por cero");
+        //                 }
+        //                 resultado /= numeroSiguiente;
+        //                 break;
+        //             default:
+        //                 throw new Error("Operador inválido");
+        //         }
+        //     }
         
-            return resultado;
-        };
+        //     return resultado;
+        // };
 
 
         const limpiar = () => {
