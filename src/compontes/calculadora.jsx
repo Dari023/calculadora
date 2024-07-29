@@ -20,46 +20,43 @@ export const Calculadora = () => {
             }
           };
         
-        const operaciones = (expresion) => {
-            expresion = expresion.replace(/\s+/g, '')
+          const operaciones = (expresion) => {
+            expresion = expresion.replace(/\s+/g, '');
             const operacion = expresion.split(/(\+|\-|\*|\/)/).filter(Boolean);
-
-            let resulado  = parseFloat(operacion[0])
-
-            for (let i = 1;  i < operacion.length; i +=2){
-                const operador = operacion[i]
-                const numerosiguente = parseFloat(operacion[i + 1])
-
-                if (isNaN(numerosiguente)) {
-                    throw new Error("exprecion invalida")
+        
+            let resultado  = parseFloat(operacion[0]);
+        
+            for (let i = 1;  i < operacion.length; i += 2) {
+                const operador = operacion[i];
+                const numeroSiguiente = parseFloat(operacion[i + 1]);
+        
+                if (isNaN(numeroSiguiente)) {
+                    throw new Error("expresión inválida");
                 }
-
+        
                 switch (operador) {
                     case "+":
-                        resulado += numerosiguente;
+                        resultado += numeroSiguiente;
                         break;
                     case "-":
-                        resulado -= numerosiguente;
+                        resultado -= numeroSiguiente;
                         break;
                     case "*":
-                        resulado *= numerosiguente;
+                        resultado *= numeroSiguiente;
                         break;
                     case "/":
-                        if (numerosiguente === 0) {
-                            throw new Error("dividido en cero")
+                        if (numeroSiguiente === 0) {
+                            throw new Error("división por cero");
                         }
-                        resulado /= numerosiguente;
-                        break
-                
+                        resultado /= numeroSiguiente;
+                        break;
                     default:
                         throw new Error("Operador inválido");
-                        
                 }
-                return resulado;
-            } 
-
-            
             }
+        
+            return resultado;
+        };
 
 
         const limpiar = () => {
