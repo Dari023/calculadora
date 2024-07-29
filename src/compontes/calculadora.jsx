@@ -1,4 +1,4 @@
-import { useRef, useState } from "react"
+import { useState } from "react"
 
 export const Calculadora = () => {
     const [resultado, setResultado] = useState("")
@@ -70,9 +70,7 @@ export const Calculadora = () => {
             setResultado((resultado) => resultado.slice(0, -1));
         };
 
-        const historial = () => {
-            
-        }
+       
 
     return(
         <div className="container">
