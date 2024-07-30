@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react"
-import { evaluate, log } from 'mathjs';
+import { useState } from "react"
+import { evaluate} from 'mathjs';
 export const Calculadora = () => {
     const [resultado, setResultado] = useState("")
         const funciones = (numero) => {
