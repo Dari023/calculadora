@@ -2,7 +2,6 @@ import { useState, useEffect } from "react"
 import { evaluate, log } from 'mathjs';
 export const Calculadora = () => {
     const [resultado, setResultado] = useState("")
-    const [historial, setHistorial] = useState([""])
         const funciones = (numero) => {
             
             setResultado(resultado + numero)
