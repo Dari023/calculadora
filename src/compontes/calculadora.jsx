@@ -20,43 +20,7 @@ export const Calculadora = () => {
             }
           };
         
-        //   const operaciones = (expresion) => {
-        //     expresion = expresion.replace(/\s+/g, '');
-        //     const operacion = expresion.split(/(\+|\-|\*|\/)/).filter(Boolean);
         
-        //     let resultado  = parseFloat(operacion[0]);
-        
-        //     for (let i = 1;  i < operacion.length; i += 2) {
-        //         const operador = operacion[i];
-        //         const numeroSiguiente = parseFloat(operacion[i + 1]);
-        
-        //         if (isNaN(numeroSiguiente)) {
-        //             throw new Error("expresión inválida");
-        //         }
-        
-        //         switch (operador) {
-        //             case "+":
-        //                 resultado += numeroSiguiente;
-        //                 break;
-        //             case "-":
-        //                 resultado -= numeroSiguiente;
-        //                 break;
-        //             case "*":
-        //                 resultado *= numeroSiguiente;
-        //                 break;
-        //             case "/":
-        //                 if (numeroSiguiente === 0) {
-        //                     throw new Error("división por cero");
-        //                 }
-        //                 resultado /= numeroSiguiente;
-        //                 break;
-        //             default:
-        //                 throw new Error("Operador inválido");
-        //         }
-        //     }
-        
-        //     return resultado;
-        // };
 
 
         const limpiar = () => {
@@ -74,7 +38,7 @@ export const Calculadora = () => {
             <div className="segunda">
                 <h1>Calculadora basica</h1>
                 <div className="input1">
-                    <input type="numer" value={resultado}  placeholder="0"/>
+                    <input  value={resultado}  placeholder="0"/>
                 </div>
                 <div className="numeros">
                     <div>
@@ -87,7 +51,7 @@ export const Calculadora = () => {
                         <button className="boton" onClick={() => funciones(4)}>4</button>
                         <button className="boton" onClick={() => funciones(5)}>5</button>
                         <button className="boton" onClick={() => funciones(6)}>6</button>
-                        <button className="boton" onClick={() => funciones("*")}>*</button>
+                        <button className="boton" onClick={() => funciones("*")}>x</button>
                     </div>
                     <div>
                         <button className="boton" onClick={() => funciones(7)}>7</button>
