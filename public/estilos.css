@@ -13,10 +13,13 @@
     justify-content: center;
     align-items: center;
     margin-top: 6rem;
+    
    
      
 }
-
+/* .segunda{
+    border: solid 1px white;
+} */
 
 .input1 input{
     width: 28rem;
@@ -25,6 +28,7 @@
     font-size: 2rem;
     background: transparent;
     color: white;
+    
 
 }
 
@@ -41,7 +45,7 @@
     font-size: 2rem;
     background-color: rgb(63, 87, 167);
     color: black;
-    border: solid 1px black; 
+    border: solid 1px rgb(0, 8, 54); 
     transition: background-color 0.2s ease;
 }
 

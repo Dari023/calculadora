@@ -1,12 +1,12 @@
-import { useState } from "react"
-import { evaluate } from 'mathjs';
+import { useState, useEffect } from "react"
+import { evaluate, log } from 'mathjs';
 export const Calculadora = () => {
     const [resultado, setResultado] = useState("")
-   
+    const [historial, setHistorial] = useState([""])
         const funciones = (numero) => {
             
             setResultado(resultado + numero)
-            console.log(resultado );
+            
         }
 
         const calcularResultado = () => {
@@ -61,7 +61,8 @@ export const Calculadora = () => {
                     </div>
                     <div>
                         <button className="boton" onClick={() => funciones(".")}>.</button>
-                        <button className="boton cero" onClick={() => funciones(0)}>0</button>
+                        <button className="boton " onClick={() => funciones(0)}>0</button>
+                        <button className="boton " onClick={() => funciones("%")}>%</button>
                         <button className="boton" onClick={() => funciones("+")}>+</button>
                     </div>
                     <div>
@@ -69,7 +70,7 @@ export const Calculadora = () => {
                         <button className="boton" onClick={limpiarUno}><i class="bi bi-backspace-fill"></i></button>
                         <button className="boton igual" onClick={calcularResultado}>=</button>
                     </div>
-                    
+                
                 </div>
             </div>
             
